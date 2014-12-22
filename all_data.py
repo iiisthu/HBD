@@ -48,7 +48,7 @@ parts.map(lambda p: Row(host=p[1], dimm_id=p[3], host_sn=p[5], capacity=p[7], fr
 parts.map(lambda p: Row(host=p[1], dimm_id=p[2], value=p[3], host_sn=p[5], reason=p[7], record_id=p[9], result=p[11], source=p[13]))
 
 #dimm_performance
-parts.map(lambda p: Row(host=p[1], dimm_id=p[2], value=p[3], host_sn=p[5], curr_freq=p[7], numa=p[9], record_id=p[11]))
+parts.map(lambda p: Row(host=p[1], dimm_id=p[2], value=p[3], host_sn=p[5], cur_freq=p[7], numa=p[9], record_id=p[11]))
 
 #hdd_basic
 parts.map(lambda p: Row(host=p[1], pd_id=p[2], value=p[3], host_sn=p[5], capacity=p[7], did=p[9], firmware=p[11], interface=p[13], lss=p[15], manufacturer=p[17], media=p[19], model=p[21], pss=p[23], rpm=p[25], sn=p[27]))
@@ -67,12 +67,12 @@ parts.map(lambda p: Row(host=p[1], device_id=p[2], value=p[3], l_raw=p[5], l_thr
 parts.map(lambda p: Row(host=p[1], device_id=p[2], value=p[3], host_sn=p[5], capacity=p[7], did=p[9], firmware=p[11], interface=p[13], lss=p[15], manufacturer=p[17], media=p[19], model=p[21], pss=p[23], rpm=p[25], sn=p[27]))
 
 #nic_basic
-parts.map(lambda p: Row(host=p[1], eth_id=p[2], value=p[3], host_sn=p[5], bandwidth=p[7], manufacurer=p[9], sn=p[11], version=p[13]))
+parts.map(lambda p: Row(host=p[1], eth_id=p[2], value=p[3], host_sn=p[5], bandwidth=p[7], manufacturer=p[9], sn=p[11], version=p[13]))
 
 #nic_failure
 parts.map(lambda p: Row(host=p[1], eth_id=p[2], value=p[3], host_sn=p[5], reason=p[7], record_id=p[9], result=p[11], source=p[13]))
 
-#nic_status
+#nic _status
 parts.map(lambda p: Row(host=p[1], eth_id=p[2], value=p[3], host_sn=p[5], duplex=p[7], phyad=p[9], port=p[11], record_id=p[13], speed=p[15]))
 
 #psu_basic
@@ -86,13 +86,13 @@ parts.map(lambda p: Row(host=p[1], value=p[3], host_sn=p[5], code=p[7]))
 
 #server_overall_status
 #??? what is the host
-parts.map(lambda p: Row(host=p[1], value=p[3], avg_power=p[5], avt_temp=p[7], bios_v=p[9], bmc_v=p[11], capping_power=p[13], capping_temp=p[15], cpu_n=p[17], epc=p[19], hdoctor_v=p[21], mb_v=p[23], peak_power=p[25], peak_temp=p[27], procuct=p[29], rack_info=p[31], record_id=p[33]))
+parts.map(lambda p: Row(host=p[1], value=p[3], host_sn=p[5], avg_power=p[7], avt_temp=p[9], bios_v=p[11], bmc_v=p[13], capping_power=p[15], capping_temp=p[17], cpu_n=p[19], epc=p[21], hdoctor_v=p[23], mb_v=p[25], peak_power=p[27], peak_temp=p[29], procuct=p[31], rack_info=p[33], record_id=p[35]))
 
 #server_rt_status
 parts.map(lambda p: Row(host=p[1], value=p[3], host_sn=p[5], cpupower=p[7], dimmpower=p[9], in_temp=p[11], out_temp=p[13], pch_temp=p[15], power=p[17], power_ratio=p[19], record_id=p[21]))
 
 #vd_failure
-parts.map(lambda p: Row(host=p[1], vd_id=p[2], value=p[3], reason=p[5], record_id=p[7], result=p[9], source=p[11]))
+parts.map(lambda p: Row(host=p[1], vd_id=p[2], value=p[3], host_sn=p[5], reason=p[7], record_id=p[9], result=p[11], source=p[13]))
 
 #vd_status
 parts.map(lambda p: Row(host=p[1], vd_id=p[2], value=p[3], host_sn=p[5], label=p[7], level=p[9], pd_n=p[11], pid=p[13], rcp=p[15], record_id=p[17], rw_r=p[19], status=p[21], tid=p[23], wcp=p[25]))
